@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pdf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body style="font-size: 13px; padding: 20px 50px; font-family: 'Arimo', sans-serif;">
+
+<table style="border-collapse: collapse; width: 100%; ">
+
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 15%; vertical-align: bottom;">
+            <span style="float: left; font-weight: bold; font-size: 16px; ">Acc#
+
+            <span>
+                AA00-ZZ26
+            </span>
+
+            </span>
+        </td>
+        <td rowspan="5" style="width: 85%; text-align: center; margin-right: 15%;">
+
+            <img src="data:image/png;base64,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"
+                 style="width: 350px; margin-right: 15%;">
+
+        </td>
+    </tr>
+
+</table>
+
+
+<p style="font-weight: bold; text-align: center;">
+    STATEMENT
+</p>
+
+<table style="border-collapse: collapse; width: 100%; border: 2px solid black;">
+    <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">Customer Details</caption>
+
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            <span style="float: left; font-weight: bold;">NIC</span>
+            <span style="float: right;">61101-4698452-3</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            <span style="float: left; font-weight: bold;">Gender</span>
+            <span style="float: right;">Male</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            <span style="float: left; font-weight: bold;">Old Account 1</span>
+        </td>
+        <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+            <img src="https://travellersworldwide.com/wp-content/uploads/2023/02/Shutterstock_1765167053.jpg.webp" style="width: 100px;">
+
+        </td>
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+            <span style="float: left; font-weight: bold;">Name</span>
+            <span style="float: right;">SUNEEL IQBAL</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+            <span style="float: left; font-weight: bold;">F/H Name</span>
+            <span style="float: right;">IQBAL MASIH</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">0</span>
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">DOB</span>
+            <span style="float: right;">05-05-1985</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Job</span>
+            <span style="float: right;">CUSTODIAN(PRVT)</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Old Account 2</span>
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Cell1</span>
+            <span style="float: right;">03315048903</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Cell2</span>
+            <span style="float: right;">03045539172</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">0</span>
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Sector</span>
+            <span style="float: right;">G-8/1</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Phone</span>
+            <span style="float: right;">05145539172</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Address</span>
+            <span style="float: right;">H NO C-389, CHARLAS COLONY, G-8/1, IBD</span>
+        </td>
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Job Add</span>
+            <span style="float: right;">US EMBASSY, G-5, IBD</span>
+        </td>
+    </tr>
+</table>
+
+
+<table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 10px;">
+    <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">Guarantor Details
+    </caption>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            <span style="float: left; font-weight: bold;">NIC</span>
+            <span style="float: right;">61101-6392311-3
+</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            <span style="float: left; font-weight: bold;">Gender</span>
+            <span style="float: right;">Male</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            <span style="float: left; font-weight: bold;">Relation</span>
+        </td>
+        <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+            <img src="https://travellersworldwide.com/wp-content/uploads/2023/02/Shutterstock_1765167053.jpg.webp" style="width: 100px;">
+
+        </td>
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+            <span style="float: left; font-weight: bold;">Name</span>
+            <span style="float: right;">NASEEM</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+            <span style="float: left; font-weight: bold;">F/H Name</span>
+            <span style="float: right;">TAJ MASIH
+</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">DOB</span>
+            <span style="float: right;">19-02-1980
+</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Job</span>
+            <span style="float: right;">LASCAR (GOVT)</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Cell1</span>
+            <span style="float: right;">03025192519</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Cell2</span>
+            <span style="float: right;">03415117987</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Sector</span>
+            <span style="float: right;">G-8/1</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Phone</span>
+            <span style="float: right;">05145539172</span>
+        </td>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+        </td>
+        <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Address</span>
+            <span style="float: right;">H NO C-389, ST NO 20, G-8/1, ISB
+</span>
+        </td>
+    </tr>
+    <tr>
+        <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            <span style="float: left; font-weight: bold;">Job Add</span>
+            <span style="float: right;">PAF COMPLEX, E-9, IBD</span>
+        </td>
+    </tr>
+</table>
+
+<div class="table-container" style="overflow: hidden;">
+    <table style="border-collapse: collapse; width: 60%;  float: left; border: 2px solid black; margin-top: 10px;">
+        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">Item Details
+        </caption>
+
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 47%;">
+                <span style="float: left; font-weight: bold;">Description</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 27%;">
+                <span style="float: left; font-weight: bold;">Cash Price</span>
+                <span style="float: right;"> 42,000</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            </td>
+            <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+
+            </td>
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+                <span style="float: left;">REALME C25 S (4GB + 128GB) OTC (1),
+</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+                <span style="float: left; font-weight: bold;">Advance</span>
+                <span style="float: right;">5,800</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">( 0 )</span>
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">Installment</span>
+                <span style="float: right;"> 5,800</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">X</span>
+                <span style="margin-left: 6px;">
+                    9
+                </span>
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">Total</span>
+                <span style="float: right;">58,000</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">Form Fees</span>
+                <span style="float: right;">500</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+
+    </table>
+    <table style="border-collapse: collapse; width: 37%; margin-left: 3%; height: 130px; float: left; border: 2px solid black; margin-top: 10px;">
+
+        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;"> &nbsp;
+        </caption>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+                <span style="float: left; font-weight: bold;">Open Date</span>
+                <span style="float: right;">29-12-2022</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            </td>
+            <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+
+            </td>
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+                <span style="float: left; font-weight: bold;">Closing</span>
+                <span style="float: right;">Regular</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">Close Date
+</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+
+    </table>
+</div>
+
+
+
+<div class="table-container" style="overflow: hidden;">
+    <table style="border-collapse: collapse; width: 33.33%; height: 90px;  float: left; border: 2px solid black; margin-top: 10px;">
+        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">Cheque Details
+
+        </caption>
+
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+                <span style="float: left; font-weight: bold;">Received?</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            </td>
+            <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+
+            </td>
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+                <span style="float: left; font-weight: bold;">Details</span>
+
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+
+
+    </table>
+    <table style="border-collapse: collapse; width: 32.33%; margin-left: 2%; height: 90px; float: left; border: 2px solid black; margin-top: 10px;">
+
+        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;"> More Details
+        </caption>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+                <span style="float: left; font-weight: bold;">Total Amount
+</span>
+                <span style="float: right;"> 58,000</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            </td>
+            <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+
+            </td>
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+                <span style="float: left; font-weight: bold;">Amount Paid</span>
+                <span style="float: right;"> 34,700</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">Balance</span>
+                <span style="float: right;"> 23,300</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+
+    </table>
+
+    <table style="border-collapse: collapse; width: 30%; margin-left: 2%; height: 90px; float: left; border: 2px solid black; margin-top: 10px;">
+
+        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;"> Recovery Details
+        </caption>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+                <span style="float: left; font-weight: bold;">Marked to
+</span>
+                <span style="float: right;"> Good</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 37%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 13px;">
+            </td>
+            <td rowspan="5" style="vertical-align: middle; padding: 6px 15px; width: 13px;">
+
+
+            </td>
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 43.33%;">
+                <span style="float: left; font-weight: bold;">Total Visits</span>
+                <span style="float: right;"> 0</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 23.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+        <tr>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+                <span style="float: left; font-weight: bold;">Total Calls</span>
+                <span style="float: right;">0</span>
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td style="  font-size:12px; padding: 6px 15px; width: 33.33%;">
+            </td>
+            <td  style="vertical-align: middle; padding: 6px 15px; width: 13px;"></td>
+
+        </tr>
+
+    </table>
+
+
+</div>
+
+
+
+
+
+
+<table style="width: 100%; border-collapse: collapse; margin-top: 8px;">
+
+    <tbody style="border-bottom: 2px solid;">
+    <tr style="border-top: 2px solid; border-bottom: 2px solid;">
+        <th style="padding: 8px; text-align: left;">Receipt#</th>
+        <th style="padding: 8px; text-align: left;">Period</th>
+        <th style="padding: 8px; text-align: left;">Receive Date</th>
+        <th style="padding: 8px; text-align: left;">Amount Received</th>
+        <th style="padding: 8px; text-align: left;">P/V Charges</th>
+        <th style="padding: 8px; text-align: left;">User</th>
+    </tr>
+    <tr>
+        <td style="padding: 8px; text-align: left;"></td>
+        <td style="padding: 8px; text-align: left;"></td>
+        <td style="padding: 8px; text-align: left;"></td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;"></td>
+    </tr>
+
+    <tr>
+        <td style="padding: 8px; text-align: left;"></td>
+        <td style="padding: 8px; text-align: left;"></td>
+        <td style="padding: 8px; text-align: left;"></td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;"></td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; text-align: left;">553095</td>
+        <td style="padding: 8px; text-align: left;">02/2023</td>
+        <td style="padding: 8px; text-align: left;">04-02-2023</td>
+        <td style="padding: 8px; text-align: left;">5,800</td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;">ASIF INSTALL</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; text-align: left;">553095</td>
+        <td style="padding: 8px; text-align: left;">02/2023</td>
+        <td style="padding: 8px; text-align: left;">04-02-2023</td>
+        <td style="padding: 8px; text-align: left;">5,800</td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;">ASIF INSTALL</td>
+    </tr>
+    <tr>
+        <td style="padding: 8px; text-align: left;">553095</td>
+        <td style="padding: 8px; text-align: left;">02/2023</td>
+        <td style="padding: 8px; text-align: left;">04-02-2023</td>
+        <td style="padding: 8px; text-align: left;">5,800</td>
+        <td style="padding: 8px; text-align: left;">0</td>
+        <td style="padding: 8px; text-align: left;">ASIF INSTALL</td>
+    </tr>
+    </tbody>
+    <!-- Add more rows as needed -->
+</table>
+
+<br>
+<br>
+<div></div>
+<br>
+<br>
+
+
+<table style="width: 100%; border-collapse: collapse;">
+    <tr>
+        <td style="padding: 8px; text-align: left;">
+            <p style="font-weight: bold;">
+                THIS IS A COMPUTER GENERATED STATEMENT
+                IT NEEDS NO VERIFICATION
+            </p>
+
+
+        </td>
+        <td style="padding: 8px; text-align: left;">
+
+
+            <p style="width: 100%; border-bottom:1px solid">
+                Unit 6,7, Chanab Market, G-7/1, Isb 051-2606055
+
+            </p>
+            <p>
+                Shop 1,2,3,4, Gondal Plaza, Main double Road, Opposite PSO Pump, Soan
+                Garden, Isb 051-8893248-49
+            </p>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
