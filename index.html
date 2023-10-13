@@ -1,454 +1,720 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Your Email</title>
-    <style>
-        /* Add your custom styles here */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            background-color: #f5f5f5;
-        }
+    <meta charset="utf-8">
+    <title>Cloud School - Cloud School &amp; Education System with React + Nextjs</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="icon" href="images/logo-icon.png">
+    <meta name="next-head-count" content="4">
+    <link
+        href="css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap"
+        rel="stylesheet">
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="_next/static/css/058575d5f9262621.css" data-n-g=""><noscript data-n-css=""></noscript>
 
-        h1 {
-            color: #333333;
-            margin-top: 0;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        p {
-            color: #555555;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="container">
-    <table style="border-collapse: collapse; width: 100%; ">
+    <div>
+        <div id="navbar" class="navbar-area">
+            <div class="desktop-nav">
+                <div class="container-fluid">
+                    <div class="navbar navbar-expand-md navbar-light"><a class="navbar-brand" href="index.htm"><img
+                                src="images/logo.png" alt="logo"></a>
 
-        <tr>
-            <td style="
+                        <div class="others-options ms-auto">
+                            <ul class="d-flex align-items-center">
+                                <!-- <li><a class="cart" href="auth/index.htm"><i
+                                            class="ri-shopping-cart-line"></i><span>0</span></a></li> -->
+                                <li><a class="default-btn" href="#"><i
+                                            class="ri-registered-line"></i><span>Request a Demo</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-area bg-1">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="banner-img"><img src="images/banner/banner-img-1.png" alt="banner"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-content">
+                            <h1>
+                                Improve Your Online Learning Experience Better Instantly
+                            </h1>
+                            <p>Welcome to our <span>cutting-edge</span> Learning Management System, where knowledge
+                                meets innovation. Explore a world of <span>limitless possibilities</span> in education.
+                            </p>
+                            <p><button class="btn btn-outline-white">Request a Demo</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div><img src="images/banner/shape-1.svg" class="shape shape-1" alt="banner"><img
+                src="images/banner/shape-2.svg" class="shape shape-2" alt="banner"><img src="images/banner/shape-3.svg"
+                class="shape shape-3" alt="banner">
+        </div>
+        <div class="courses-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title"><span class="top-title">Achievements</span>
+                    <h2>Trusted by the world's best Companies Achievements</h2>
+                </div>
+                <div class="row">
 
-    font-size: 12px;
-    padding: 6px 0px;
-    width: 23%;
-    vertical-align: bottom;
-
-">
-            <span style="float: left; font-weight: bold; font-size: 10px; ">Acc#
-
-            <span>
-                AA00-ZZ26
-            </span>
-
-            </span>
-            </td>
-            <td rowspan="5" style="width: 85%; text-align: center; margin-right: 15%;">
-
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAb4AAABxCAMAAACdmjYOAAAAyVBMVEX///9vLJGnqawAAACkpqnazOJsIo9pHo1sJY9tKZCvkMGmgbpkDIlmFYvcz+Pm3evOwNiffbPMttfDrNB5O5nw6vT4+PiLX6WQYKrOvNm/q8zDxMariL7y8vL7+fzf4OGvsbQ7OzvW19i3ubu/v79+fn7o6ekqKirNztCWa65/R51gAIcbGxvR0tS4nciNjY1dXV2Xl5dMTEycnqJlZWVwcHAyMjLo4O2FT6GedrR7QZp2NpdSUlIQEBBsbGyRkZEfHx+9o8yJVqQeS/ouAAAWQElEQVR4nO2da0PaShOAkQaSIAEPSpQTQ9aExoDFG7WKtKfV//+j3r3fsksAFbUv86GVXDbJPpmdmd3ZTa32kSSO8zzBksfhe9/MTlaWME+KEahDcYigP0GU5DuIH13CpMhAnSJTBG4C2XSH8ONKmETARE5C6IAif+/b3IlJ4qi+DJ1ACKY7FfxokmSrsGMEo/i973cnkiRgdXgYYH20a0M/iuTZWuyoBu4AfgiJR+tpngBY7Gzgu0tqhec4UtxnPKCevPfd/59LbGw3MbNsFEUFlGiUARtFZ7RTwHeUtG6Kz8EIhucKlzBGHTGmYB7sLOC7SVTi4dRhXG7RqDAvQBm3M93uPe8kTqPRKErKDqdTjyqUKS9KAJ1oO3e9EyxJ3eKSOCBdxZKleiPqgJ0B3JaEthjPASu7kUk2c2SZOTsDuB2JgZke1Lx1igl1eav73YksoZmeU99F4J9BRmZ62a4HensyPHiaPy8eH8ZPjTXPzM30ije5zf8/ObBKnx/Tv3Rd1/N83/fcYDJYq3yj8lGXpWu4lk365Rvsrvekf6UENrnosUMOHl1/j4vnjqsrm0to7vciO08v2LWqdbp3UbrB1toP+/fJnk0CpmVPTU/d4x6tzi8xtp00amu5rMROZUG9QL9Bd4dvBXy9C1/f5T0OVy0+NZu+Hb5Xkip83bZhn3u6avEWfMTt3OF7sVThGzeNOzW3waqNO3xvKxX47lkN7/lu0AxYO6qq33BuNYbmuKG+azxfSSrwXbIa9vda3fvBhHox/kQCNnzYs+Ize54Z2bnD92JxqYhq8ckGEjiMmddJaHY9qn+BqPD+ZJkrauquZuN1a+G7oDfa3OGT5F8il6KRPKGbkHnrP1Jc/gMxb7TG/fYlK6C78Pwl+EytJ3U818LX71DpuTt8JbnnDmZzX9rcZcau+Q/Z0LloukG7OTl+okcc7Hl7y/AZ1I8Plq+DT9xSe4evJF0zvk6g19XJ/uXgvj9krmYPtaZL8cX6WDmzfBvi6+zwlcWC74DjOzSe1msj9VyKr5ar/BzAxxp2+F5LLPi4vxf0TGc9kbOW46vl8oifk4lhvh2+1xILvsOl+FoXe6vgq9WmJM0F/SOPsO/wvZZshO/YWxEfnoIJJVJzW3b4XkveGB+ScnbKDt9ryRbwlWWH77Vkh+9Ty6viC6MoXWVBgR2+15JXxRdjHxPNOlm+Osvr4hv27/srDyPDw4d90fvw2aUy7jMlKNnw0X5OzDArEivDV8M3vD+cP08ejx4nx6eNyoZ82B20xscPk8njw+R5fNrrrgWx379v9AZYeoOPgl/Hd/kPlhPW5+kdkw3/zPHR5O9HnkYxZ3vxMK48RosiPpCZG1MTvgYrqizze3RAGd+wd+wGOBEOp8ItWksrtdN6dgOXHu57XjMIHk7vxf5hq3RhXt6w0RpP9oI2TZZqb2jzX190fOOgiUSkuXhNIm2098C2l6SMlSaB4WkJIJomam6uCV/vommTC3xUCd/lUaDkUvnuwp5CODhuu1rmFTqjPeZ30J+46mVdj+E7XMCTffHUyqjnu0oJX+kZqQRob8O17cX4gGGIlkCcKRNLjPhKw7Jc2iZ8PZECIKr1wpKLev/QtjyX155TSP2JVp6/R/Z0HvUr/Z34Ygs+RFC56MvxdU/cEjxUr4ExcfQysD0VKu6RsLDhO9TzJf9WfJb8FiRAuegL8V3WLvdsyvRctn/D/bKeytJ8wDDK+BaorEvDe/KX4rOsMFeaFfsyfM3T/baVR1Aa4BqObTfNxMVumVn7eqZ8yb8TH5Q4TyNDE+qoM/pehg/6S3JV+kqt+xP9CefyPUMHFYnbVE7C0ZERX/fCdEMfGJ9LHGulfpBQfNpOtrct2xxDlpI6JdbseZKMJPn1adLkKQ2fuHgzuPAnk6bsl/haKHkpXgvfDU6eBo1G4+DffV8+x0MJPf0JjSnY88HGc/hgfJs/Lr79yQOSR7118l20t9G0tFqKyyDUL6ONqTYj3YSve4nlacyv4Af7ZFsLV1YJnx8sTntk17HQMK2foSvoeX5L1Prw4FnSyia8/b6Oyl9I7HGkCF+lDx73DYk88Qp+6lPBe8mfz+z9POqwvZLHEAqlq4WwMc2AA9SLLul1OeAvju+pZkzD5weTS16JQ16inkh8whva5vO9Uh48x1dOYo/SvyfP5y+6R/QIL9ibHM/3L58OeweDweCg8VF7Xai8ZMRBZOgCsiHOteUE7PguuZPoLbQYQMXnLg6VKuQ223uWNzcWHg0aDD4pf0jYesrbh8/4FP+R3qfXPOl1P4q+qfIG+GKGT6SWaWLDN5zzu3Ef77WTZHzexal2ZZ5b5R9pp/07brddzzg5ap+ppu8rt0Hw7R0tSBVM1uiZ3bK8Kb6R5aIWfN1H3gQG49JJEr7gWWdbq3EXsVm+Xudp3DQh6POTPPlBGD56sY88PvUG+Hj0bl0DyYyvx2Nx3zSkJ/D5pgplWfx7beMlzcaKG9qm/D4o+IIn45nLJNze6gsfB5/o3vB800VF2L5v2Fs7Wo7PLLz1VN4jGV9zrp4RTzMAwMi6JlTufP95dvbzP7R8Xji7urqytUCvIx8F33Au/IiF0daITjPjHFEedLfX8AqFgy37STK+ttpMF2QJdS3xkUv+9QuXuzw8g/99Xf1uNpAPgu9+Ijx/S0xcge95E+37l9+IHC1K+JqKDZZXGjI93OiLIjefHN/KrkuPd7bAWN1yUhU+VsI6+HpV+BStJPTYCntlftkXg3w6fOsHDi0e7fmu1VNo8GkX28PHhvyIFJhaliYp7hbUF8dLKLDznz9vf31efKWwvSQqvr5k9vYOrHdage+kCt+wf9Caj8fj+X6rwTqJqvApfQAh6gykk9xQXoHeuPyHcX2fxmEY5tH1p8UndZqZRcHXFWaveVSO57h0XoRveHjsBm7T81DXZdt7Jh1uVfiUSyGjwBoU8ooqV8gxrd/8N/ik+KQua4t7LePricHs4GSZ0/gifJdNZcDd99yLcaMan9L/jVYa4jNMs9LjOQjWtbSh+KT4+HJmtqVTOb5mpyVGXtvLuzdegK+xMAyZe+2T7sCMj5elhIMYH1tSD5Tw4ZhBWWx79DnxFRyfZd1VMT4gusnUGjTI5rbvyZgXgyztA1/wxIjP9+XUNexR08YTp0QC5Sp3CJbywPGnDBxEuqct8BP4pHHzN8N3ak91ESNGZnwL2RYT1wVPdUvw06mLW2LPRdkU/zDgi/PqD4Qa9xuXEX4LfHmV6ynwyZkMrnEiL5dN8bWULAwtWaAC36PyfBEdeQ5pPqvatYm177u8JXRubn4r7mny+/vZty8/br8C6VzUC4ekjtmH2dXd9fff6oTIfPb1+vr6600KXxx4pDj5TWYYzRi+mXG35Lp0D0UyiV9OM5JlQ3wDMVDhu8HFYrHwL8oZuxZ8agdQTKL1gmRjOdpy6jfYU7E520imP6Vw/ooz+CGFiDHvdbsS54WiK+4MxyPiym+Cj7ue+iNSkT3PQ1fKjljWu78Zvr4ovumd0j6UxtNJW7WHZnzeg+oKT2l/J/q3rrtlNGq/s34qROoPxQLo9jNB7MrUXZNo53359sb4ogrjp8R9h02J3xL92wyflEUhryY7vD9tyvlqFu3T8PFFSp16VLZE35mGXE0NHnd4q1NggDi+2zNlN3WD4tJ5b41PrMVq/mqG2uui6J/d/m2Er8+9k9IQ4v3cEwq4Cj7xJRhg/KKnpCXn32eJ9uSM3vnt7e03pYE8+wVFnPvj9lbeS5X29gr8vvuxHXyx6Jc3Rn5an2dPNk9Wfhvh48/hzsunHByJddKq8RVOVVd8pujIreJ+0GbxJ/7yTwL+kJ84DEnSJHG4RhbwzUjP0Z/EDcKdOb9IvBLebAWfZPyMrafeZX0oYnc7v43wjc0+JJU+T3CqxkdUzwFqPBvmRMivSGvlrvlxU7JBTPUgHaTfmBbToaY7WhB+Ec7wTtx3c8NOK7aCT5roZ2pmSgNGcvtpWcdpI3w8c9oyobqi10VyXcgYA8ipXWeNypR+m4e2lPGVBpB1gZIObCBdhLSJzD/B+M65VieoMT3P+R7B62Yb+KTW0/ThhvJwba9Zaf82wXfPTJ955pGtz7OsfWSsCPkrJHgHdDs1hw43dKFzrfAjekPM4p18aeLK/KBvt9a/lp9zfJGifTXw6/zP2Vvjk/LkTc6LIVmi51a1n5vg6/KN5hutwsfivlgyBLk8VkuthCM/ZAKuzwU/rFHYZv1SoyjS0tK3W8OHu9sIPjKQccUmuIaiqcYP+Db4hO9p+mSicY5Dlf/yInwXL8NXyJn++McMs8jxE4rGk0lcXFHnhFgwrJHX2jHnkjW046PtLnRmrwxV+TJ8Cxu+UJpmVFY/Y6ZZr708/nuZ9pkHEoXtkx+zjE99D0nOBMKCSDp5KYscS0T9f1Cjod2VdgDuZfuP/L0EXyq3xWdXqjHaCB932Hxr6vhUqF/Z+lnyPN2l/DayfQvmupj9Ib6WcPCvtLXU5xlzXuQn8UFDghXQrUkURerH0eq4xm/hy/xDdTuJYDeHdpIuwacnQP2RRzVehi+wjo5LS5E7JefTkmW93H/ZBN+Q5Z95hrBPorfnKviONXzE3IkDUmr+lAHcr2Xzhr3LPwnxRL7omT9XUou6DF8t/akClAraCN+c47N/g6gQ6leKcm1zHJb6LxvFfXMWmBuS5If70mDjWvhI9OAkaFyav5xfCSpZEuadnKnuozhhFe2DulDcSc6Q/JJY1rIW+EyjcDw5WZxTSnOQ1U/vuLbOMFrmv2yEj8/Z1XufYXkTabDK0ngeGRtP2bSLbDqMTzWCOcN3q9Ih8l3auBwf2lJkd3xoAjI/JcIViaIYkNXk+ebm6YCKpGhSP/A/jU6ncTi/KL/cQv1K3gs/37vUCl/iv3B83viALm4kExEJDuyG0Uj5kPd5NlV+93PlE02uBR8xDvhVVFIHxJAmr2OsTGpDw/FhUrehYScgPyrxEYnoqEVeo2vPSNn8GN9xW5ui7NHPKATS/DhpHjqZv9xslxfEkZxPPeFTGm3XC+9Z+184PvbBCfdCvijHt0f3trGSivmx3t4hc7T6gxNX/cbPcnwkvAPy3VDXTOoUJIZOsfPEaUxZb6haC7/ZTiR2fNOf19fXAiTpfYvKX1GpWJrAk9LAyp+nMuCTe84077Pl6oWLd6NnGz8S+IwXPdFvnPSTDR/5dt99HLcOD1v7Jwv+enKVNeNjyRJkoE8JuzK9U4IohhLc4U2IQv7ti65O6S/qlmKx4xtJkJHcEiV/Cb7SIgxGfPISBWrS0jJ8MBYz89sMX60jZbr4sClByZ48p9vf91bCRzsBJRseUnxC22i7dieAFgIoHfUR+/IzRSEr8Ekh4+3Lta9c/0Z88jI9ysjRUny1gTl/YkN8cne4flWvwSblWjxPvkgaMeSiEWGL5EtmgQ2m/2RPGpFBPGwO6VjgD1ZA8U3lGamQCL6Y4xOd3RFtcl+Er68nbxnxSbG7ym85vtogkPSPf3RnU3zQUhv5+cFDv7YqvpCNF6VxGMaJ+DCvkxVQ0PCtyIW4y5I8zWhnF21NAYPrjIrIYWO3uE0CjlPHJ/9E/W8C37cb+DunQft/GHxKLvLD8AWxdfDVGtqnNc34lBVegOBXga82kNYf4fw2xlfrPOrXQ4/bvBzWqvDt8SvETN3odw0wSz7hCL2beioLER5K6ENJSIgx/aFsCzk+LIUYQ/zGulFh21nG566DrzZQljbaMwQOSKTpDniwbEV8sPRy/tLm+Gr9fW0ZJd9tkhVIGb6gCh/nxx+nnkjRH8V3pjOUhuZK/M5pS6pmuNSs+LigQcTSqpmBvJ5nWQKthjtjzyUpk74XeLa5JeoXiNmztNpa4a6+asdAWlvzguhfo7Tgpxo46DceyNF9Z74IKEEfxh1H+/R1G9BC26rrQstym/IVIumjPk4dtZdiJiPFdxtm3+SKvpUtfvZHgXDNaqMa3zf5kF8A10ZJ8K12y9uplPSrczrBYdvj/N+OdW6JHLxz//O+unDlPnDp/fItyVftlPaqb1S/Nz8iMeqkJdZN5oUqfe8d4xVqcUGbSgIPP52jNJ5nsTzgfq6Fu/GNgHAmAkZT48m3Fcj2/UlGzFr+urHMG9lIhpWLgKv8bNOltyRsdaiNJU6SaZoYazDmA6mFc3V399uY41rU4a6vTrbB2hPFqJ5Fr8luNVFWSJYM4E4+h4wU++cUVRM0dvKxRF0g0snWVMBElXQLi96EoXE+z6qHTM2J8iFs+0Lla1zxyPAwIRXLTKOtS6jxc4xJyhbJM0eR2RbMJ169xVSz8iHQ+zRnW8P31bwmQzxLYCgld//ms/KrzLL0nCi3TBHZumhfCHBmoxU1MNGXdjUmHr62RGgly0xPbkBSZ3oVgTjMEzAzTkAdLcNHS8jQa5ibstChB1TUkzyP43XbqTeTqU7ByfRJAGUJITz9PMt83deVCNRQZRsqj+OKCKGI1r/6LKvgq5fwSWWktlUB3kuS0oeIHVAs+1xVmBdaPwfyW7fTmmB8+Qy1jCkAWAeSDGRhPHJARNSf4osxBbSTHYTuEOMrAKDtfBzBP0MFXziCLW+E8KXkFGgGAeAtS4qT00PYRsVRDAtK0H3g0kJY1ns4f3kJBiIYJSYHAK3BC8pL0m8ULm0iEF+YAzRUUNTzOHLiWuKk+TQMUydKyRtE8dWyOmxaQBIXSI9GSV6gBFCED56ZU0VLC9jMAgXfMK1naQrxZVGaIRMXgyJOuF0k+NDxcT2bxlG9GOVTZDdCaG6T+tsuc2eWsPSJHEzQAVkBA2EGMU7SKDN/TmArZg8LvFNnhvjEOMEFagXWx1q58YQhOqxhpHmA1in6H+ILgXq3yElRGk+sTPkMHQVgWSN0esLyaSR8BFod3xW8XFYzOzxbkFIDyhFilxKJw1YMKx+1xYA/AiF0XaD9gSoEQxXoSCYzMh+zhA/WaQLgMXkG4K88LTALpH2S2xgm0wj+tNk+WAZ0SFFMxEyhjA8Vg/2cqYOgo9jpnTxSqID2D60sFWer0T7WNeTiR3X04eSsQBMXsKKU8EFaU3JQBAMkUKQjEFLb57Au+sSJpunMjg9rMC5jtAxfMgtDaImRvJdHmhu+8bAKve3eMGkqYZ0VgG8LU4ROx4cUIeWTH9AfBcOHXlbcFobopHA5vlCdKm/DVwPWmfNbkqTswlRq3pYcTi5E+6DVURx7VOEzHvdhQjFqKnl0nSH7BTg+WvXEhc11fDi05/jIuVys+JgNfkdJDU7lR4KHwnboNeLs1FE9hX+GtTSJsfZBH554FxFI8iSa4VSlyJnCg2Jk7vIIzX2AaMIiibn2RdDz5LavYNdIcwlf7oxyaGdZFWn4sJ+TQnywkYXX3Urwa5dkZPFPDPDeo52fAugPkzpKszoYQTJwC9oQZzRdcAq3Z6z/MiEHhVEdpMkIejwR+pvfeg7qWQyjuxB6XyEtF/UkZtCW4NgSO7kRPIpxSTLUHsfo+CmeyYR25Hh2aAEP25oLbpNwmlUShAdk0+0tyr6TtSROLfEdZVffsfvgEiewDaqroR75AdulHbtPITE0xUWUATKPIIvkPpidWOR/GyljY/NQBGIAAAAASUVORK5CYII="
-                     style="width: 180px; margin-right: 19%;">
-
-            </td>
-        </tr>
-
-
-    </table>
-    <table  style="border-collapse: collapse; width: 100%; ">
-        <tr>
-            <td>
-                <p style="text-align: center; color: black; font-weight: bold; margin-top: 12px;">
-                    Statement
-                </p>
-            </td>
-        </tr>
-    </table>
-
-
-
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">Customer Details</caption>
-
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-                <div style="text-align: center; margin-bottom: 8px;">
-                    <img src="https://travellersworldwide.com/wp-content/uploads/2023/02/Shutterstock_1765167053.jpg.webp" style="width: 100px;">
-
+                    <div class="col-lg-3 col-md-6">
+                        <div class="achievement__item aos-init aos-animate" data-aos="flip-up" data-aos-delay="100">
+                            <div class="achievement__img ">
+                                <img loading="lazy" width="60" height="48" src="images/icons/school.png"
+                                    class="attachment-full size-full" alt="" decoding="async">
+                            </div>
+                            <div class="achievement__info">
+                                <h2 class="achievement__number">100+</h2>
+                                <p>Registered Scools</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="achievement__item aos-init aos-animate" data-aos="flip-up" data-aos-delay="200">
+                            <div class="achievement__img bg-2">
+                                <img loading="lazy" width="48" height="48" src="images/icons/users.png"
+                                    class="attachment-full size-full" alt="" decoding="async">
+                            </div>
+                            <div class="achievement__info">
+                                <h2 class="achievement__number">12K+</h2>
+                                <p>Active Users</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="achievement__item aos-init aos-animate" data-aos="flip-up" data-aos-delay="300">
+                            <div class="achievement__img bg-3">
+                                <img loading="lazy" width="48" height="48" src="images/icons/placeholder.png"
+                                    class="attachment-full size-full" alt="" decoding="async">
+                            </div>
+                            <div class="achievement__info">
+                                <h2 class="achievement__number">80+</h2>
+                                <p>Geographic Reach</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="achievement__item aos-init aos-animate" data-aos="flip-up" data-aos-delay="400">
+                            <div class="achievement__img bg-4">
+                                <img loading="lazy" width="40" height="40" src="images/icons/positive-review.png"
+                                    class="attachment-full size-full" alt="" decoding="async">
+                            </div>
+                            <div class="achievement__info">
+                                <h2 class="achievement__number">96.55</h2>
+                                <p>Satisfiction Rate</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <span style="float: left; font-weight: bold;">NIC</span>
-                <span style="float: right;">61101-4698452-3</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Gender</span>
-                <span style="float: right;">Male</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Old Account 1	</span>
-                <span style="float: right;">0</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Name	</span>
-                <span style="float: right;">SUNEEL IQBAL</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">F/H Name	</span>
-                <span style="float: right;">IQBAL MASIH</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">DOB	</span>
-                <span style="float: right;">05-05-1985</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Job	</span>
-                <span style="float: right;">CUSTODIAN(PRVT)</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Old Account 2	</span>
-                <span style="float: right;">0</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Cell1	</span>
-                <span style="float: right;">03315048903</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Cell2	</span>
-                <span style="float: right;">03045539172</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Sector	</span>
-                <span style="float: right;">G-8/1</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Phone	</span>
-                <span style="float: right;">05145539172</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Address	</span>
-                <span style="float: right;">H NO C-389, CHARLAS COLONY, G-8/1, IBD</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Job Add	</span>
-                <span style="float: right;">US EMBASSY, G-5, IBD</span>
-            </td>
+            </div>
+        </div>
 
+        <div class="feature-dcourses-area bg-color-f6fafb pt-100 pb-70" id="feature">
+            <div class="section-title"><span class="top-title">Features</span>
+                <h2>Explore Our Powerful Features</h2>
+            </div>
+            <div class="gray-bg-section py-5 bg-image">
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
 
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7">
 
-
-
-
-        </tr>
-
-
-
-
-
-
-
-
-    </table>
-
-
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 10px;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">
-            Guarantor Details</caption>
-
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-                <div style="text-align: center; margin-bottom: 8px;">
-                    <img src="https://travellersworldwide.com/wp-content/uploads/2023/02/Shutterstock_1765167053.jpg.webp" style="width: 100px;">
-
+                                <div class="view-figure pe-0 pe-md-5 position-relative">
+                                    <figure><img src="images/dash-1.png" class="img-fluid"></figure>
+                                    <div class="shape1 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center">
+                                <div class="view-content-block">
+                                    <div class="block-heading"><span>1</span>
+                                        <h6>Bird's Eye View</h6>
+                                        <h2 class="after-border">Overview Dashboard</h2>
+                                    </div>
+                                    <p>Experience the big picture with our Bird's Eye View Dashboard. Gain instant
+                                        insights into your data, monitor key metrics, and make informed decisions at a
+                                        glance. Simplify complex information and stay in control with our intuitive
+                                        dashboard interface</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7 order-1 order-md-2">
+                                <div class="view-figure ps-0 ps-md-5 position-relative">
+                                    <figure><img src="images/dash-2.png" class="img-fluid"></figure>
+                                    <div class="shape2 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center order-2 order-md-1">
+                                <div class="view-content-block">
+                                    <div class="block-heading"><span>2</span>
+                                        <h6 class="green-text">Faculty Administration</h6>
+                                        <h2 class="after-border">Streamlining Faculty Administrative Operations for
+                                            Optimal Academic Excellence</h2>
+                                    </div>
+                                    <p>Effortlessly oversee your faculty members with our comprehensive Faculty
+                                        Management system. Streamline scheduling, track performance, and enhance
+                                        collaboration among your teaching staff. With intuitive tools and real-time
+                                        updates, managing your faculty has never been more efficient. Empower your
+                                        educators to excel, and watch your institution thrive.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7">
+                                <div class="view-figure pe-0 pe-md-5 position-relative">
+                                    <figure><img src="images/dash-3.png" class="img-fluid"></figure>
+                                    <div class="shape1 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center">
+                                <div class="view-content-block">
+                                    <div class="block-heading"><span>3</span>
+                                        <h6 class="blue-text">Academic Performance Overview</h6>
+                                        <h2 class="after-border"> Academic Performance Monitoring System</h2>
+                                    </div>
+                                    <p>Explore marks and results effortlessly through the Academic Performance Overview
+                                        feature. Gain insights into progress, track achievements, and keep the
+                                        educational journey on the right path. With user-friendly tools, accessing
+                                        academic data has never been easier. Stay informed and stay ahead in the
+                                        learning adventure.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7 order-1 order-md-2">
+                                <div class="view-figure ps-0 ps-md-5 position-relative">
+                                    <figure><img src="images/dash-4.png" class="img-fluid"></figure>
+                                    <div class="shape2 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center order-2 order-md-1">
+                                <div class="view-content-block">
+                                    <div class="block-heading"><span>4</span>
+                                        <h6 class="green-text">Student Management System</h6>
+                                        <h2 class="after-border">Advanced Student Lifecycle Management Solution for
+                                            Educational Institutions</h2>
+                                    </div>
+                                    <p>Simplify enrollment, streamline communication, and ensure a seamless educational
+                                        experience for all.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7">
+                                <div class="view-figure pe-0 pe-md-5 position-relative">
+                                    <figure><img src="images/dash-5.png" class="img-fluid"></figure>
+                                    <div class="shape1 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center">
+                                <div class="view-content-block">
+                                    <div class="block-heading"><span>5</span>
+                                        <h6 class="blue-text">Exam Module</h6>
+                                        <h2 class="after-border">Comprehensive Examination Management Module for
+                                            Effortless Test Creation</h2>
+                                    </div>
+                                    <p>Revolutionize your examination processes with our cutting-edge Exam Module. From
+                                        test creation and administration to grading and result analysis, our advanced
+                                        system simplifies every aspect of the examination lifecycle, providing a
+                                        seamless and efficient experience for educators and students alike. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7 order-1 order-md-2">
+                                <div class="view-figure ps-0 ps-md-5 position-relative">
+                                    <figure><img src="images/dash-6.png" class="img-fluid"></figure>
+                                    <div class="shape2 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center order-2 order-md-1">
+                                <div class="view-content-block">
+                                    <div class="block-heading"><span>6</span>
+                                        <h6 class="green-text">Website Configuration</h6>
+                                        <h2 class="after-border">Website Configuration Made Simple</h2>
+                                    </div>
+                                    <p>Easily customize and manage your website's settings and appearance with our
+                                        Website Configuration Module. Effortlessly update content, design elements, and
+                                        user permissions to create a tailored online experience that reflects your
+                                        institution's unique identity and meets your specific needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" class="bird-view-section">
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7">
+                                <div class="view-figure pe-0 pe-md-5 position-relative">
+                                    <figure><img src="images/dash-7.png" class="img-fluid"></figure>
+                                    <div class="shape1 position-absolute">
+                                        <img src="images/shape.png" alt="shape">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center">
+                                <div class="block-heading"><span>7</span>
+                                    <h6 class="blue-text">Administrative Control Hub</h6>
+                                    <h2 class="after-border"> Streamlined Educational Institution Operations, Student
+                                        Management, and Faculty Oversight</h2>
+                                </div>
+                                <p>Take control of your institution's operations and administration with our
+                                    Administrator Module. This comprehensive toolkit empowers educational administrators
+                                    with the tools needed to efficiently manage student records, faculty assignments,
+                                    course scheduling, and more. Streamline administrative tasks and enhance overall
+                                    efficiency, allowing your institution to focus on delivering quality education.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="zoom-in-up" class="bird-view-section">
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="mt-5 col-12 col-sm-12 col-md-7 col-lg-7 order-1 order-md-2">
+                            <div class="view-figure ps-0 ps-md-5 position-relative">
+                                <figure><img src="images/dash-8.png" class="img-fluid"></figure>
+                                <div class="shape2 position-absolute">
+                                    <img src="images/shape.png" alt="shape">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 col-12 col-sm-12 col-md-5 col-lg-5 align-self-center order-2 order-md-1">
+                            <div class="view-content-block">
+                                <div class="block-heading"><span>8</span>
+                                    <h6 class="green-text">Reports Module</h6>
+                                    <h2 class="after-border">Advanced Reports and Analytics Module for In-Depth Data
+                                        Analysis</h2>
+                                </div>
+                                <p>Dive deep into insightful analytics, generate comprehensive reports, and gain a
+                                    holistic understanding of your institution's performance. From attendance
+                                    tracking to assessment analysis, this robust tool empowers you to make informed
+                                    choices that drive academic excellence and institutional success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="images/courses-shape.png" class="courses-shape" alt="Image">
+    </div>
+    <div class="feature-dcourses-area pt-5 pb-70">
+        <div>
+            <h5 class="text-center m-0">More Features</h5>
+        </div>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-12">
+                    <div class="row mt-5 pt-3">
 
-                <span style="float: left; font-weight: bold;">NIC</span>
-                <span style="float: right;">61101-6392311-3</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Gender</span>
-                <span style="float: right;">Male</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Relation	</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Name	</span>
-                <span style="float: right;">NASEEM</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">F/H Name	</span>
-                <span style="float: right;">TAJ MASIH</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">DOB	</span>
-                <span style="float: right;">19-02-1980</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Job	</span>
-                <span style="float: right;">LASCAR (GOVT)</span>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/2.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Daily Attendance</h3>
+                                    <p>Take your students attendance in a smart way</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-60" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/3.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Class List</h3>
+                                    <p>Manage your schools class list whenever you want.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-60" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/4.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Subjects</h3>
+                                    <p>Add different subjects for different classes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="400">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/1.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Manage Faculty</h3>
+                                    <p>Add and manage teachers from the portal.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="500">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/5.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Exams</h3>
+                                    <p>Schedule exams and grading system of classes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="600">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/6.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Routine</h3>
+                                    <p>Manage your schools class routine easily.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="700">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/7.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Student Information</h3>
+                                    <p>Add your students information within a few minute</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="800">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/8.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Syllabus</h3>
+                                    <p>Manage syllabuses based on the classes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="900">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/9.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>User Management</h3>
+                                    <p>Add multiple users for smooth management.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/10.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Institute Management</h3>
+                                    <p>Efficiently Manage Your Institute with Ease.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="1100">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/11.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Results</h3>
+                                    <p>Access each class result with a Click.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12  mb-60" data-aos="fade-up" data-aos-delay="1200">
+                            <div class="service-items">
+                                <div class="service-icon">
+                                    <img src="images/feature icons/12.png" alt="icon-img">
+                                </div>
+                                <div class="service-text">
+                                    <h3>Reports</h3>
+                                    <p>Comprehensive Insights at Your Fingertips.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Cell1	</span>
-                <span style="float: right;">03025192519</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Cell2	</span>
-                <span style="float: right;">03415117987</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Sector	</span>
-                <span style="float: right;">G-8/1</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Phone	</span>
-                <span style="float: right;">05145539172</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Address	</span>
-                <span style="float: right;">H NO C-389, ST NO 20, G-8/1, ISB</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Job Add	</span>
-                <span style="float: right;">PAF COMPLEX, E-9, IBD</span>
-            </td>
-        </tr>
-    </table>
+    <div class="transform-area pb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 wow animate__animated animate__fadeInLeft delay-0-2s" data-aos="zoom-in-up"
+                    data-aos-delay="500">
+                    <div class="transform-conetnt wow animate__animated animate__fadeInLeft delay-0-8s">
+                        <h2>Transform Your Life Through Online Management</h2>
+                        <p>Unlock a world of possibilities and transform your journey with our
+                            cutting-edge online management platform. From seamless access to progress
+                            tracking, we empower you to take charge of your institute management experience, all
+                            from the comfort of your own space.</p>
+                        <a class="default-btn" href="courses/index.htm">Request a Demo</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow animate__animated animate__fadeInRight delay-0-2s" data-aos="zoom-in-up"
+                    data-aos-delay="500">
+                    <div class="transform-img wow animate__animated animate__fadeInRight delay-0-8s"><img
+                            src="images/transform-img.png" alt="transform"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-features-area bg-color-f1efee pt-100 pb-70" id="expertise">
+        <div class="container">
+            <div class="section-title"><span class="top-title">For Everyone</span>
+                <h2>Why to Choose Cloud School</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-sm-6 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-features h-100"><img src="images/features/no-coding.png" alt="feature">
+                        <h3>No coding knowledge is required</h3>
+                        <p>Its super easy to work with Cloud School. You can operate this application without any
+                            coding knowledge. Allyou just need is the basic knowledge of operating a computer.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-features h-100"><img src="images/features/institute.png" alt="feature">
+                        <h3>Fit for any educational institution</h3>
+                        <p>Cloud School is the best SAAS application for any school, college, and other related
+                            institute.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6  mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-features h-100"><img src="images/features/user-friendly.png" alt="feature">
+                        <h3>User-friendly Application.</h3>
+                        <p>Cloud School is designed to manage your activities easily. Our team is continuosly
+                            updating to make the application more optimized and user-friendly.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-features h-100"><img src="images/features/reliable.png" alt="feature">
+                        <h3>Most reliable application</h3>
+                        <p>Cloud School is one of the most reliable application. More than 2000+ institutes around
+                            the world working with us.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-features h-100"><img src="images/features/open source.png" alt="feature">
+                        <h3>Open source application</h3>
+                        <p>You will get the source code after purchasing the application. You can easily customize
+                            this application based on your demand.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="single-features h-100"><img src="images/features/customization.png" alt="feature">
+                        <h3>Easiy to customize</h3>
+                        <p>Customize the application according to your needs. Add or remove, or change any feature
+                            to make the application comfortable for you and your users.</p>
+                    </div>
+                </div>
+            </div>
+        </div><img src="images/features/feature-shape-1.svg" class="shape shape-1" alt="feature">
+    </div>
+    <div class="testimonial-area pt-100 pb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="testimonial-img"><img src="images/testimonials/testimonial-1.png" alt="testimonial">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="testimonials-conetent">
+                        <h2>Our Users Are Our Strength. See What They Say About Us</h2>
+                        <div class="row">
+                            <div class="col-sm-6" data-aos="flip-left" data-aos-delay="1000">
+                                <figure class="snip1192">
+                                    <blockquote>Absolutely blown away by the Bird's Eye View Dashboard! As someone who's not a tech wizard, I appreciate how intuitive it is. I can finally keep tabs on all the important metrics without feeling like I'm deciphering a secret code. The simplicity of the interface is a game-changer—I've gone from drowning in data to riding the waves of insights effortlessly. Major kudos to the creators for making my professional life so much smoother!</blockquote>
+                                    <div class="author">
+                                        <img src="images/testimonials/1.jpg" alt="sq-sample29" />
+                                        <h5>Eleanor Faint<span> LittleSnippets</span></h5>
+                                    </div>
+                                </figure>
+                            </div>
+                            <div class="col-sm-6" data-aos="flip-left" data-aos-delay="1000">
+                                <figure class="snip1192 hover">
+                                    <blockquote>Thrilled with the Bird's Eye View Dashboard! As a tech novice, I appreciate its user-friendliness. Tracking metrics is now a breeze, and the straightforward interface is a game-changer. Kudos to the creators for streamlining my professional life!The interface's simplicity is a game-changer—I've transitioned from drowning in data to effortlessly riding the waves of insights. Huge props to the creators for making my professional life!
+                                    </blockquote>
+                                    <div class="author">
+                                        <img src="images/testimonials/2.jpg" alt="sq-sample24" />
+                                        <h5>Max Conversion<span> LittleSnippets</span></h5>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 10px;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">
-            Item Details</caption>
+    <div class="faq-area pb-5" id="faq">
+        <div class="container">
+            <h2 class="text-center mb-5">FAQ</h2>
+            <div class="accordion" id="accordionExample" data-aos="zoom-in-up">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is a Cloud School?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Cloud School is a software platform designed to facilitate the management, delivery, and
+                            tracking of educational content and training programs. It helps organizations and
+                            educators create, administer, and monitor online courses and learning materials.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How can Cloud School benefit my organization or educational institution?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Cloud School offers several benefits, including centralized content management, the
+                            ability to
+                            reach a wider audience through online learning, tracking and reporting on learner
+                            progress, automation of administrative tasks, and scalability for growing educational
+                            needs. </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What features should I look for when choosing an Cloud School for my organization?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            When selecting an Cloud School, consider features like course creation and
+                            customization, user
+                            management, assessment tools, reporting and analytics, integration capabilities,
+                            mobile-friendliness, and data security to ensure it aligns with your specific needs.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Is technical expertise required to use an Cloud School?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            This Cloud School platforms are designed to be user-friendly, with intuitive interfaces
+                            that
+                            require minimal technical expertise. However, some familiarity with basic computer
+                            operations and content management may be beneficial. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-area bg-color-f6fafb pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-footer-widget"><a href="index.html" class="logo"><img src="images/logo-md.png"
+                                class="main-logo" alt="logo"><img src="images/logo-md.png" class="white-logo"
+                                alt="logo"></a>
+                        <p>Elevate your online learning experience instantly with our transformative solutions.Discover a world of enhanced engagement, efficiency, and excellence in education.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-footer-widget pl-40">
+                        <h3>Quick Link</h3>
+                        <ul class="import-link">
+                            <li><a href="#feature">Features</a></li>
+                            <li><a href="#expertise">Experties</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-footer-widget pl-40">
+                        <h3>Demo</h3>
+                        <p>Request a Demo and Unlock the Future of Learning Today. See our platform in action and experience the difference firsthand.</p>
+                        <span><a class="default-btn" href="#"><span>Request a Demo</span></a></span>
+                    </div>
+                </div>
+                
+            </div>
+        </div><img src="images/footer-shape-1.png" class="shape shape-1" alt="footer"><img
+            src="images/footer-shape-2.png" class="shape shape-2" alt="footer">
+    </div>
 
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-
-
-                <span style="float: left; font-weight: bold;">Description</span>
-                <span style="float: right;">REALME C25 S (4GB + 128GB) OTC (1)</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Cash Price</span>
-                <span style="float: right;">42,000</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Advance	</span>
-                <span style="float: right;">5,800</span> <span style="font-weight: bold; margin-left: 4px;"> ( 0 )</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Installment 	</span>
-                <span style="float: right;">5,800</span> <span style="font-weight: bold; margin-left: 4px;"> X 9</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Total	</span>
-                <span style="float: right;">58,000</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Form Fees	</span>
-                <span style="float: right;">500</span>
-            </td>
-        </tr>
-    </table>
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 2px;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">
-            &nbsp;</caption>
-
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-
-
-                <span style="float: left; font-weight: bold;">Open Date</span>
-                <span style="float: right;">29-12-2022</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Closing</span>
-                <span style="float: right;">Regular</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Close Date	</span>
-                <span style="float: right;">5,800</span> <span style="font-weight: bold; margin-left: 4px;"> -</span>
-            </td>
-        </tr>
-    </table>
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 10px;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">
-            Cheque Details</caption>
-
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-
-
-                <span style="float: left; font-weight: bold;">Received?</span>
-                <span style="float: right;"></span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Details</span>
-                <span style="float: right;"></span>
-
-            </td>
-        </tr>
-    </table>
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 10px;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">
-            More Details</caption>
-
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-
-
-                <span style="float: left; font-weight: bold;">Total Amount</span>
-                <span style="float: right;">58,000</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Amount Paid</span>
-                <span style="float: right;">34,700</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Balance</span>
-                <span style="float: right;">23,300</span>
-            </td>
-        </tr>
-    </table>
-    <table style="border-collapse: collapse; width: 100%; border: 2px solid black; margin-top: 10px;">
-        <caption style="  font-style: italic;  text-align: left; font-weight: bold; font-size: 14px;">
-            Recovery Details</caption>
-
-        <tr>
-
-            <td style="  font-size:12px; padding: 6px 15px; width: 70%;     vertical-align: text-top;">
-
-
-                <span style="float: left; font-weight: bold;">Marked to</span>
-                <span style="float: right;">Good</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Total Visits</span>
-                <span style="float: right;">0</span>
-                <br>
-                <br>
-                <span style="float: left; font-weight: bold;">Total Calls</span>
-                <span style="float: right;">0</span>
-            </td>
-        </tr>
-    </table>
-
-
-    <table style="width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 11px;">
-
-        <tbody style="border-bottom: 2px solid;">
-        <tr style="border-top: 2px solid; border-bottom: 2px solid;">
-            <th style="padding: 8px; text-align: left;">Receipt#</th>
-            <th style="padding: 8px; text-align: left;">Period</th>
-            <th style="padding: 8px; text-align: left;">Receive Date</th>
-            <th style="padding: 8px; text-align: left;">Amount Received</th>
-            <th style="padding: 8px; text-align: left;">P/V Charges</th>
-            <th style="padding: 8px; text-align: left;">User</th>
-        </tr>
-        <tr>
-            <td style="padding: 8px; text-align: left;"></td>
-            <td style="padding: 8px; text-align: left;"></td>
-            <td style="padding: 8px; text-align: left;"></td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;"></td>
-        </tr>
-
-        <tr>
-            <td style="padding: 8px; text-align: left;"></td>
-            <td style="padding: 8px; text-align: left;"></td>
-            <td style="padding: 8px; text-align: left;"></td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;"></td>
-        </tr>
-        <tr>
-            <td style="padding: 8px; text-align: left;">553095</td>
-            <td style="padding: 8px; text-align: left;">02/2023</td>
-            <td style="padding: 8px; text-align: left;">04-02-2023</td>
-            <td style="padding: 8px; text-align: left;">5,800</td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;">ASIF INSTALL</td>
-        </tr>
-        <tr>
-            <td style="padding: 8px; text-align: left;">553095</td>
-            <td style="padding: 8px; text-align: left;">02/2023</td>
-            <td style="padding: 8px; text-align: left;">04-02-2023</td>
-            <td style="padding: 8px; text-align: left;">5,800</td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;">ASIF INSTALL</td>
-        </tr>
-        <tr>
-            <td style="padding: 8px; text-align: left;">553095</td>
-            <td style="padding: 8px; text-align: left;">02/2023</td>
-            <td style="padding: 8px; text-align: left;">04-02-2023</td>
-            <td style="padding: 8px; text-align: left;">5,800</td>
-            <td style="padding: 8px; text-align: left;">0</td>
-            <td style="padding: 8px; text-align: left;">ASIF INSTALL</td>
-        </tr>
-        </tbody>
-        <!-- Add more rows as needed -->
-    </table>
-
-    <table style="width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 30px">
-        <tr>
-            <td style="padding: 8px; text-align: left;">
-                <p style="font-weight: bold;">
-                    THIS IS A COMPUTER GENERATED STATEMENT
-                    IT NEEDS NO VERIFICATION
-                </p>
-
-
-            </td>
-
-        </tr>
-        <tr>
-            <td style="padding: 8px; text-align: left;">
-
-
-                <p style="width: 100%; border-bottom:1px solid">
-                    Unit 6,7, Chanab Market, G-7/1, Isb 051-2606055
-
-                </p>
-                <p>
-                    Shop 1,2,3,4, Gondal Plaza, Main double Road, Opposite PSO Pump, Soan
-                    Garden, Isb 051-8893248-49
-                </p>
-            </td>
-        </tr>
-    </table>
-
-
-</div>
+    <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
+    <div class="go-top" style="display:none"><i class="bx bx-chevron-up"></i></div>
+    </div>
+    <script src="_next/static/js/jquery-3.7.1.min.js"></script>
+    <script src="_next/static/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
