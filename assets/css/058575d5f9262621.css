@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
 /*!* Bootstrap v5.2.0 (https://getbootstrap.com/)
 * Copyright 2011-2022 The Bootstrap Authors
@@ -32821,7 +32821,7 @@ textarea.form-control {
 }
 
 .banner-area.bg-1 {
-    background-image: url(../../../images/banner/banner-bg.jpg);
+    background-image: url(../../images/banner/banner-bg.jpg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover
